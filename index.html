@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MISSION JOB BENGAL — Mock Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <section id="startScreen" class="screen active">
+    <div class="brand">MISSION JOB BENGAL</div>
+    <div class="card start-card">
+      <div class="badge">ONLINE MOCK TEST</div>
+      <h1 id="testTitle">Mock Test 01</h1>
+      <p class="muted">পরীক্ষা শুরু করার আগে আপনার তথ্য দিন</p>
+      <label>আপনার নাম</label>
+      <input id="name" type="text" placeholder="নাম লিখুন">
+      <label>মোবাইল নম্বর</label>
+      <input id="mobile" inputmode="numeric" maxlength="10" placeholder="১০ সংখ্যার মোবাইল নম্বর">
+      <div class="info-grid">
+        <div><b id="totalQ">10</b><span>প্রশ্ন</span></div>
+        <div><b id="duration">20</b><span>মিনিট</span></div>
+        <div><b id="perMark">1</b><span>সঠিকের নম্বর</span></div>
+        <div><b id="negative">0</b><span>ভুলের নম্বর</span></div>
+      </div>
+      <button id="startBtn" class="primary">পরীক্ষা শুরু করুন</button>
+    </div>
+  </section>
+
+  <section id="quizScreen" class="screen">
+    <header class="quiz-header">
+      <div>
+        <div class="brand small">MISSION JOB BENGAL</div>
+        <div id="progressText">প্রশ্ন 1 / 10</div>
+      </div>
+      <div id="timer" class="timer">20:00</div>
+    </header>
+    <main class="quiz-wrap">
+      <div class="progress"><div id="progressBar"></div></div>
+      <div id="questionCard" class="card"></div>
+      <div class="nav-row">
+        <button id="prevBtn" class="secondary">← আগের প্রশ্ন</button>
+        <button id="nextBtn" class="primary">পরের প্রশ্ন →</button>
+        <button id="submitBtn" class="danger hidden">পরীক্ষা জমা দিন</button>
+      </div>
+    </main>
+  </section>
+
+  <section id="resultScreen" class="screen">
+    <div class="brand">MISSION JOB BENGAL</div>
+    <div class="card result-card">
+      <div class="badge">TEST COMPLETED</div>
+      <h1>পরীক্ষা সম্পন্ন হয়েছে</h1>
+      <p id="candidateInfo" class="muted"></p>
+      <div class="score" id="score">0 / 10</div>
+      <div class="stats">
+        <div><b id="correct">0</b><span>সঠিক</span></div>
+        <div><b id="wrong">0</b><span>ভুল</span></div>
+        <div><b id="unanswered">0</b><span>উত্তরহীন</span></div>
+        <div><b id="percentage">0%</b><span>শতাংশ</span></div>
+      </div>
+      <p id="sendStatus" class="muted"></p>
+      <button id="reviewBtn" class="secondary">উত্তর দেখুন</button>
+      <button id="restartBtn" class="primary">আবার পরীক্ষা দিন</button>
+    </div>
+    <div id="review" class="review"></div>
+  </section>
+</div>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
